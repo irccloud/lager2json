@@ -56,9 +56,9 @@ printable({pid, Pid}) ->
 %% try to get a printable representation and express it as a json
 %% string
 printable({Key, Value}) when is_atom(Key); is_binary(Key) ->
-  case jsx:is_term(Value) of
+  case (catch jsx:is_term(Value)) of
     true  -> {Key, Value};
-    false -> {Key, unicode:characters_to_binary(io_lib:format("~p", [Value]), unicode)}
+    _ -> {Key, unicode:characters_to_binary(io_lib:format("~p", [Value]), unicode)}
   end.
 
 pid_list(Pid) ->
