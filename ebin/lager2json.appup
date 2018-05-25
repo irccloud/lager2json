@@ -1,4 +1,4 @@
-{"1.0.2-irccloud",
+{"1.0.2+irccloud.20180525",
  [{"1.0.2",
    [
     {load_module,lager2json}
