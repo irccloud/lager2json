@@ -3,7 +3,7 @@ defmodule Lager2JSON.Mixfile do
 
   def project do
     [app: :lager2json,
-     version: "1.0.2",
+     version: "1.0.2+irccloud.20180531",
      language: :erlang,
      description: "a lager formatter that produces json",
      deps: deps,
@@ -11,7 +11,7 @@ defmodule Lager2JSON.Mixfile do
   end
 
   defp deps do
-    [{:jsx, "~> 2.8.0"}, {:rfc3339, "~> 0.2.0"}]
+    [{:jsx, "~> 2.8.0"}, {:rfc3339, "~> 0.2.1"}]
   end
 
   defp package do
